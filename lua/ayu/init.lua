@@ -47,6 +47,7 @@ function ayu.base_groups()
     PmenuSel = {fg = colors.fg, bg = colors.selection_inactive, style = 'reverse'},
     Question = {fg = colors.string},
     Search = {fg = colors.bg, bg = colors.constant},
+    IncSearch = {fg = colors.keyword, bg = colors.ui},
     SpecialKey = {fg = colors.selection_inactive},
     SpellCap = {fg = colors.tag, style = 'undercurl'},
     SpellLocal = {fg = colors.keyword, style = 'undercurl'},
