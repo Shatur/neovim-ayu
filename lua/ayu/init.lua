@@ -135,7 +135,7 @@ local function set_groups()
     NvimTreeOpenedFolderName = {fg = colors.special},
     NvimTreeRootFolder = {fg = colors.keyword},
     NvimTreeSpecialFile = {fg = colors.fg},
-    NvimTreeExecFile = {}
+    NvimTreeExecFile = {fg = colors.fg}
   }
 
   local overrides = vim.g.ayu_overrides
