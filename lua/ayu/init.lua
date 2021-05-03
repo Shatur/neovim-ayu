@@ -2,7 +2,7 @@ local colors = require('ayu.colors')
 local utils = require('ayu.utils')
 local ayu = {}
 
-function ayu.set_terminal_colors()
+local function set_terminal_colors()
   vim.g.terminal_color_0 = colors.bg
   vim.g.terminal_color_1 = colors.markup
   vim.g.terminal_color_2 = colors.string
@@ -23,8 +23,9 @@ function ayu.set_terminal_colors()
   vim.g.terminal_color_foreground = colors.fg
 end
 
-function ayu.base_groups()
+local function set_groups()
   local groups = {
+    -- Base
     Normal = {fg = colors.fg, bg = colors.bg},
     ColorColumn = {bg = colors.line},
     CursorColumn = {bg = colors.line},
@@ -89,14 +90,8 @@ function ayu.base_groups()
     DiffChange = {bg = colors.vcs_modified_bg},
     DiffDelete = {bg = colors.vcs_removed_bg},
     DiffRemoved = {fg = colors.vcs_removed},
-    DiffText = {bg = colors.vcs_diff_text}
-  }
+    DiffText = {bg = colors.vcs_diff_text},
 
-  return groups
-end
-
-function ayu.plugin_groups()
-  local groups = {
     -- LSP
     LspDiagnosticsSignError = {fg = colors.error},
     LspDiagnosticsSignWarning = {fg = colors.keyword},
@@ -140,10 +135,17 @@ function ayu.plugin_groups()
     NvimTreeOpenedFolderName = {fg = colors.special},
     NvimTreeRootFolder = {fg = colors.keyword},
     NvimTreeSpecialFile = {fg = colors.fg},
-    NvimTreeExecFile = {},
+    NvimTreeExecFile = {}
   }
 
-  return groups
+  local overrides = vim.g.ayu_overrides
+  if overrides then
+    vim.tbl_extend('force', groups, overrides)
+  end
+
+  for group, parameters in pairs(groups) do
+    utils.highlight(group, parameters)
+  end
 end
 
 function ayu.colorscheme()
@@ -156,17 +158,8 @@ function ayu.colorscheme()
   vim.g.colors_name = 'ayu'
 
   colors.generate()
-  for group, parameters in pairs(ayu.base_groups()) do
-    utils.highlight(group, parameters)
-  end
-
-  local async_load_plugin = vim.loop.new_async(vim.schedule_wrap(function()
-    ayu.set_terminal_colors()
-    for group, parameters in pairs(ayu.plugin_groups()) do
-      utils.highlight(group, parameters)
-    end
-  end))
-  async_load_plugin:send()
+  set_terminal_colors()
+  set_groups()
 end
 
 return ayu
