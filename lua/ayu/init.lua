@@ -34,7 +34,7 @@ local function set_groups()
     LineNr = {fg = colors.guide_normal},
 
     Directory = {fg = colors.func},
-    ErrorMsg = {fg = colors.fg, bg = colors.error, style = 'standout'},
+    ErrorMsg = {fg = colors.white, bg = colors.error, style = 'standout'},
     VertSplit = {fg = colors.panel_border, bg = colors.bg},
     Folded = {fg = colors.fg_idle, bg = colors.panel_bg},
     FoldColumn = {bg = colors.bg},
