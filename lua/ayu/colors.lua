@@ -1,5 +1,6 @@
 local colors = {
-  black = '#FFFFFF'
+  white = '#FFFFFF',
+  black = '#000000'
 }
 
 function colors.generate()
