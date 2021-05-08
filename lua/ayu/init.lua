@@ -93,6 +93,11 @@ local function set_groups()
     DiffText = {bg = colors.vcs_diff_text},
 
     -- LSP
+    LspDiagnosticsDefaultError = {fg = colors.error},
+    LspDiagnosticsDefaultWarning = {fg = colors.keyword},
+    LspDiagnosticsDefaultInformation = {fg = colors.tag},
+    LspDiagnosticsDefaultHint = {fg = colors.regexp},
+
     LspDiagnosticsSignError = {fg = colors.error},
     LspDiagnosticsSignWarning = {fg = colors.keyword},
     LspDiagnosticsSignInformation = {fg = colors.tag},
