@@ -88,7 +88,7 @@ local function set_groups()
     DiffAdd = {bg = colors.vcs_added_bg},
     DiffAdded = {fg = colors.vcs_added},
     DiffChange = {bg = colors.vcs_modified_bg},
-    DiffDelete = {bg = colors.vcs_removed_bg},
+    DiffDelete = {fg = colors.vcs_removed_bg, bg = colors.vcs_removed_bg},
     DiffRemoved = {fg = colors.vcs_removed},
     DiffText = {bg = colors.vcs_diff_text},
 
