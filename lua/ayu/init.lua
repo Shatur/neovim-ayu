@@ -140,7 +140,8 @@ local function set_groups()
     NvimTreeOpenedFolderName = {fg = colors.special},
     NvimTreeRootFolder = {fg = colors.keyword},
     NvimTreeSpecialFile = {fg = colors.fg},
-    NvimTreeExecFile = {fg = colors.fg}
+    NvimTreeExecFile = {fg = colors.fg},
+    NvimTreeIndentMarker = {fg = colors.guide_normal}
   }
 
   local overrides = vim.g.ayu_overrides
