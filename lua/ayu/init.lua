@@ -91,6 +91,7 @@ local function set_groups()
     DiffDelete = {bg = colors.vcs_removed_bg},
     DiffRemoved = {fg = colors.vcs_removed},
     DiffText = {bg = colors.vcs_diff_text},
+    gitcommitBlank = {fg = colors.fg},
 
     -- LSP
     LspDiagnosticsDefaultError = {fg = colors.error},
