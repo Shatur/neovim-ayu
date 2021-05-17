@@ -143,7 +143,7 @@ local function set_groups()
     NvimTreeSpecialFile = {fg = colors.fg},
     NvimTreeExecFile = {fg = colors.fg},
     NvimTreeIndentMarker = {fg = colors.guide_normal},
-    
+
     -- WhichKey
     WhichKeyFloat = {bg = colors.bg},
   }
