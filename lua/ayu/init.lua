@@ -146,6 +146,13 @@ local function set_groups()
 
     -- WhichKey
     WhichKeyFloat = {bg = colors.bg},
+
+    -- Neogit
+    NeogitDiffContextHighlight = {bg = colors.line},
+    NeogitHunkHeader = {fg = colors.tag},
+    NeogitHunkHeaderHighlight = {fg = colors.tag, bg = colors.line},
+    NeogitDiffAddHighlight = {bg = colors.vcs_added_bg},
+    NeogitDiffDeleteHighlight = {bg = colors.vcs_removed_bg}
   }
 
   local overrides = vim.g.ayu_overrides
