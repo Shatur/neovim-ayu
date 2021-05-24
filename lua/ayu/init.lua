@@ -40,7 +40,7 @@ local function set_groups()
     FoldColumn = {bg = colors.bg},
     SignColumn = {bg = colors.bg},
 
-    MatchParen = {style = 'underline'},
+    MatchParen = {style = 'underline', sp = colors.func},
     ModeMsg = {fg = colors.string},
     MoreMsg = {fg = colors.string},
     NonText = {fg = colors.guide_normal},
@@ -77,7 +77,7 @@ local function set_groups()
     Structure = {fg = colors.special},
     Special = {fg = colors.accent},
     Delimiter = {fg = colors.special},
-    Underlined = {fg = colors.tag, style = 'underline'},
+    Underlined = {fg = colors.tag, sp = colors.tag, style = 'underline'},
     Ignore = {fg = colors.fg},
     Error = {fg = colors.fg, bg = colors.error},
     Todo = {fg = colors.markup},
