@@ -147,6 +147,8 @@ local function set_groups()
     NvimTreeExecFile = {fg = colors.fg},
     NvimTreeIndentMarker = {fg = colors.guide_normal},
 
+    NvimTreeWindowPicker = {fg = colors.keyword, bg = colors.panel_border, style = 'bold'},
+
     -- WhichKey
     WhichKeyFloat = {bg = colors.bg},
 
