@@ -117,6 +117,7 @@ local function set_groups()
     -- TreeSitter
     TSProperty = {fg = colors.special},
     TSParameter = {fg = colors.fg},
+    TSUnderline = {sp = colors.tag, style = 'underline'},
 
     -- Gitsigns
     GitSignsAdd = {fg = colors.vcs_added},
