@@ -116,7 +116,7 @@ local function set_groups()
     LspDiagnosticsUnderlineHint = {style = 'undercurl', sp = colors.regexp},
 
     -- TreeSitter
-    TSProperty = {fg = colors.special},
+    TSProperty = {fg = colors.tag},
     TSParameter = {fg = colors.fg},
     TSUnderline = {sp = colors.tag, style = 'underline'},
 
