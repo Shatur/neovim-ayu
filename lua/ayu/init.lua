@@ -92,7 +92,6 @@ local function set_groups()
     DiffDelete = {bg = colors.vcs_removed_bg},
     DiffRemoved = {fg = colors.vcs_removed},
     DiffText = {bg = colors.vcs_diff_text},
-    gitcommitBlank = {fg = colors.fg},
 
     -- LSP
     LspDiagnosticsDefaultError = {fg = colors.error},
@@ -158,7 +157,13 @@ local function set_groups()
     NeogitHunkHeader = {fg = colors.tag},
     NeogitHunkHeaderHighlight = {fg = colors.tag, bg = colors.line},
     NeogitDiffAddHighlight = {bg = colors.vcs_added_bg},
-    NeogitDiffDeleteHighlight = {bg = colors.vcs_removed_bg}
+    NeogitDiffDeleteHighlight = {bg = colors.vcs_removed_bg},
+
+    -- Hop
+    HopNextKey = {fg = colors.keyword, sp = colors.keyword, style = 'bold,underline'},
+    HopNextKey1 = {fg = colors.entity, sp = colors.tag, style = 'bold,underline'},
+    HopNextKey2 = {fg = colors.tag},
+    HopUnmatched = {fg = colors.comment}
   }
 
   local overrides = vim.g.ayu_overrides
