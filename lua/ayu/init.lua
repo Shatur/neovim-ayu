@@ -27,7 +27,7 @@ local function set_groups()
   local groups = {
     -- Base
     Normal = {fg = colors.fg, bg = colors.bg},
-    NormalFloat = {bg = colors.bg},
+    NormalFloat = {bg = colors.panel_shadow},
     ColorColumn = {bg = colors.line},
     CursorColumn = {bg = colors.line},
     CursorLine = {bg = colors.line},
