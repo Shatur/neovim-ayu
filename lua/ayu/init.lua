@@ -41,7 +41,7 @@ local function set_groups()
     FoldColumn = {bg = colors.bg},
     SignColumn = {bg = colors.bg},
 
-    MatchParen = {style = 'underline', sp = colors.func},
+    MatchParen = {sp = colors.func, style = 'underline'},
     ModeMsg = {fg = colors.string},
     MoreMsg = {fg = colors.string},
     NonText = {fg = colors.guide_normal},
@@ -51,10 +51,10 @@ local function set_groups()
     Search = {fg = colors.bg, bg = colors.constant},
     IncSearch = {fg = colors.keyword, bg = colors.ui},
     SpecialKey = {fg = colors.selection_inactive},
-    SpellCap = {style = 'undercurl', sp = colors.tag},
-    SpellLocal = {style = 'undercurl', sp = colors.keyword},
-    SpellBad = {style = 'undercurl', sp = colors.error},
-    SpellRare = {style = 'undercurl', sp = colors.regexp},
+    SpellCap = {sp = colors.tag, style = 'undercurl'},
+    SpellLocal = {sp = colors.keyword, style = 'undercurl'},
+    SpellBad = {sp = colors.error, style = 'undercurl'},
+    SpellRare = {sp = colors.regexp, style = 'undercurl'},
     StatusLine = {fg = colors.fg, bg = colors.panel_bg},
     StatusLineNC = {fg = colors.fg_idle, bg = colors.panel_bg},
     WildMenu = {fg = colors.fg, bg = colors.markup},
@@ -109,10 +109,10 @@ local function set_groups()
     LspDiagnosticsVirtualTextInformation = {fg = colors.tag},
     LspDiagnosticsVirtualTextHint = {fg = colors.regexp},
 
-    LspDiagnosticsUnderlineError = {style = 'undercurl', sp = colors.error},
-    LspDiagnosticsUnderlineWarning = {style = 'undercurl', sp = colors.keyword},
-    LspDiagnosticsUnderlineInformation = {style = 'undercurl', sp = colors.tag},
-    LspDiagnosticsUnderlineHint = {style = 'undercurl', sp = colors.regexp},
+    LspDiagnosticsUnderlineError = {sp = colors.error, style = 'undercurl'},
+    LspDiagnosticsUnderlineWarning = {sp = colors.keyword, style = 'undercurl'},
+    LspDiagnosticsUnderlineInformation = {sp = colors.tag, style = 'undercurl'},
+    LspDiagnosticsUnderlineHint = {sp = colors.regexp, style = 'undercurl'},
 
     -- TreeSitter
     TSProperty = {fg = colors.tag},
