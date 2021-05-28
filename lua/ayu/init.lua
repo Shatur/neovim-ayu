@@ -163,7 +163,10 @@ local function set_groups()
     HopNextKey = {fg = colors.keyword, style = 'bold,underline'},
     HopNextKey1 = {fg = colors.entity, style = 'bold,underline'},
     HopNextKey2 = {fg = colors.tag},
-    HopUnmatched = {fg = colors.comment}
+    HopUnmatched = {fg = colors.comment},
+
+    -- Dap
+    NvimDapVirtualText = {fg = colors.regexp}
   }
 
   local overrides = vim.g.ayu_overrides
