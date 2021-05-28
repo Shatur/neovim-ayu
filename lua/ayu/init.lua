@@ -78,7 +78,7 @@ local function set_groups()
     Structure = {fg = colors.special},
     Special = {fg = colors.accent},
     Delimiter = {fg = colors.special},
-    Underlined = {fg = colors.tag, sp = colors.tag, style = 'underline'},
+    Underlined = {fg = colors.tag, style = 'underline'},
     Ignore = {fg = colors.fg},
     Error = {fg = colors.fg, bg = colors.error},
     Todo = {fg = colors.markup},
@@ -160,8 +160,8 @@ local function set_groups()
     NeogitDiffDeleteHighlight = {bg = colors.vcs_removed_bg},
 
     -- Hop
-    HopNextKey = {fg = colors.keyword, sp = colors.keyword, style = 'bold,underline'},
-    HopNextKey1 = {fg = colors.entity, sp = colors.tag, style = 'bold,underline'},
+    HopNextKey = {fg = colors.keyword, style = 'bold,underline'},
+    HopNextKey1 = {fg = colors.entity, style = 'bold,underline'},
     HopNextKey2 = {fg = colors.tag},
     HopUnmatched = {fg = colors.comment}
   }
