@@ -49,7 +49,7 @@ local function set_groups()
     PmenuSel = {fg = colors.fg, bg = colors.selection_inactive, style = 'reverse'},
     Question = {fg = colors.string},
     Search = {fg = colors.bg, bg = colors.constant},
-    IncSearch = {fg = colors.keyword, bg = colors.ui},
+    IncSearch = {fg = colors.keyword, bg = colors.selection_inactive},
     SpecialKey = {fg = colors.selection_inactive},
     SpellCap = {sp = colors.tag, style = 'undercurl'},
     SpellLocal = {sp = colors.keyword, style = 'undercurl'},
