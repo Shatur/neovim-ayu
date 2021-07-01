@@ -115,7 +115,7 @@ local function set_groups()
     LspDiagnosticsUnderlineHint = {sp = colors.regexp, style = 'undercurl'},
 
     -- Markdown
-    markdownCode = { fg = colors.special },
+    markdownCode = {fg = colors.special},
 
     -- TreeSitter
     TSProperty = {fg = colors.tag},
