@@ -170,7 +170,13 @@ local function set_groups()
     HopUnmatched = {fg = colors.comment},
 
     -- Dap
-    NvimDapVirtualText = {fg = colors.regexp}
+    NvimDapVirtualText = {fg = colors.regexp},
+
+    -- Visual Multi
+    VM_Extend = {bg = colors.selection_inactive},
+    VM_Cursor = {bg = colors.selection_inactive, sp = colors.fg, style = 'underline'},
+    VM_Insert = {sp = colors.fg, style = 'underline'},
+    VM_Mono = {fg = colors.bg, bg = colors.comment}
   }
 
   local overrides = vim.g.ayu_overrides
@@ -189,6 +195,7 @@ function ayu.colorscheme()
     vim.api.nvim_command('syntax reset')
   end
 
+  vim.g.VM_theme_set_by_colorscheme = true -- Required for Visual Multi
   vim.o.termguicolors = true
   vim.g.colors_name = 'ayu'
 
