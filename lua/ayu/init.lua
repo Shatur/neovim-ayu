@@ -144,6 +144,7 @@ local function set_groups()
     NvimTreeGitDeleted = {fg = colors.vcs_removed},
 
     NvimTreeFolderName = {fg = colors.special},
+    NvimTreeFolderIcon = { fg = colors.accent },
     NvimTreeOpenedFolderName = {fg = colors.special},
     NvimTreeRootFolder = {fg = colors.keyword},
     NvimTreeSpecialFile = {fg = colors.fg},
