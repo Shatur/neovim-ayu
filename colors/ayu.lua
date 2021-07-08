@@ -1,0 +1,1 @@
+require('ayu').colorscheme()
