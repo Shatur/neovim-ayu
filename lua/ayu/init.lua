@@ -181,7 +181,7 @@ local function set_groups()
 
   local overrides = vim.g.ayu_overrides
   if overrides then
-    vim.tbl_extend('force', groups, overrides)
+    groups = vim.tbl_extend('force', groups, overrides)
   end
 
   for group, parameters in pairs(groups) do
