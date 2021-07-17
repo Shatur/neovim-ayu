@@ -80,7 +80,7 @@ local function set_groups()
     Delimiter = { fg = colors.special },
     Underlined = { fg = colors.tag, style = 'underline' },
     Ignore = { fg = colors.fg },
-    Error = { fg = colors.fg, bg = colors.error },
+    Error = { fg = colors.white, bg = colors.error },
     Todo = { fg = colors.markup },
     qfLineNr = { fg = colors.keyword },
     Conceal = { fg = colors.comment },
