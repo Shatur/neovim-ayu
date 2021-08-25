@@ -177,6 +177,18 @@ local function set_groups()
     VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, style = 'underline' },
     VM_Insert = { sp = colors.fg, style = 'underline' },
     VM_Mono = { fg = colors.bg, bg = colors.comment },
+
+    -- Notify
+    NotifyERROR = { fg = colors.vcs_removed },
+    NotifyWARN = { fg = colors.func },
+    NotifyINFO = { fg = colors.vcs_added },
+    NotifyDEBUG = { fg = colors.comment },
+    NotifyTRACE = { fg = colors.vcs_modified },
+    NotifyERRORTitle = { fg = colors.error },
+    NotifyWARNTitle = { fg = colors.warning },
+    NotifyINFOTitle = { fg = colors.string },
+    NotifyDEBUGTitle = { fg = colors.ui },
+    NotifyTRACETitle = { fg = colors.entity },
   }
 
   local overrides = vim.g.ayu_overrides
