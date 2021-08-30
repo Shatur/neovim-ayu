@@ -10,7 +10,7 @@ local function set_terminal_colors()
   vim.g.terminal_color_4 = colors.tag
   vim.g.terminal_color_5 = colors.constant
   vim.g.terminal_color_6 = colors.regexp
-  vim.g.terminal_color_7 = colors.white
+  vim.g.terminal_color_7 = colors.fg
   vim.g.terminal_color_8 = colors.fg_idle
   vim.g.terminal_color_9 = colors.error
   vim.g.terminal_color_10 = colors.string
