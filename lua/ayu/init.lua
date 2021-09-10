@@ -189,6 +189,22 @@ local function set_groups()
     NotifyINFOTitle = { fg = colors.string },
     NotifyDEBUGTitle = { fg = colors.ui },
     NotifyTRACETitle = { fg = colors.entity },
+
+    -- DAP UI
+    DapUIScope = { fg = colors.func },
+    DapUIType = { fg = colors.entity },
+    DapUIDecoration = { fg = colors.tag },
+    DapUIThread = { fg = colors.string },
+    DapUIStoppedThread = { fg = colors.special },
+    DapUISource = { fg = colors.regexp },
+    DapUILineNumber = { fg = colors.constant },
+    DapUIFloatBorder = { fg = colors.panel_border },
+    DapUIWatchesEmpty = { fg = colors.warning },
+    DapUIWatchesValue = { fg = colors.string },
+    DapUIWatchesError = { fg = colors.error },
+    DapUIBreakpointsPath = { fg = colors.regexp },
+    DapUIBreakpointsInfo = { fg = colors.constant },
+    DapUIBreakpointsCurrentLine = { fg = colors.constant, style = 'bold' },
   }
 
   local overrides = vim.g.ayu_overrides
