@@ -1,5 +1,3 @@
-vim.o.background = "dark"
-vim.g.ayu_dark = true
 vim.g.ayu_mirage = false
-vim.g.ayu_light = false
+vim.o.background = 'dark'
 require('ayu').colorscheme()
