@@ -3,9 +3,9 @@ local colors = {
   black = '#000000',
 }
 
-function colors.generate()
+function colors.generate(mirage)
   if vim.o.background == 'dark' then
-    if vim.g.ayu_mirage then
+    if mirage then
       colors.accent = '#FFCC66'
       colors.bg = '#1F2430'
       colors.fg = '#CBCCC6'

@@ -1,5 +1,6 @@
 local colors = require('ayu.colors')
 local utils = require('ayu.utils')
+local config = require('ayu.config')
 local ayu = {}
 
 local function set_terminal_colors()
@@ -207,14 +208,15 @@ local function set_groups()
     DapUIBreakpointsCurrentLine = { fg = colors.constant, style = 'bold' },
   }
 
-  local overrides = vim.g.ayu_overrides
-  if overrides then
-    groups = vim.tbl_extend('force', groups, overrides)
-  end
+  groups = vim.tbl_extend('force', groups, config.overrides)
 
   for group, parameters in pairs(groups) do
     utils.highlight(group, parameters)
   end
+end
+
+function ayu.setup(values)
+  setmetatable(config, { __index = vim.tbl_extend('force', config.defaults, values) })
 end
 
 function ayu.colorscheme()
@@ -227,7 +229,7 @@ function ayu.colorscheme()
   vim.o.termguicolors = true
   vim.g.colors_name = 'ayu'
 
-  colors.generate()
+  colors.generate(config.mirage)
   set_terminal_colors()
   set_groups()
 end

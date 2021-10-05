@@ -1,6 +1,6 @@
 # Neovim Ayu
 
-A theme for Neovim reimplemented in lua from [ayu-vim](https://github.com/Luxed/ayu-vim).
+A colorscheme for Neovim reimplemented in lua from [ayu-vim](https://github.com/Luxed/ayu-vim).
 
 ## Screenshots
 
@@ -10,34 +10,43 @@ A theme for Neovim reimplemented in lua from [ayu-vim](https://github.com/Luxed/
 
 ![light](screenshots/light.png)
 
+## Commands
+
+To apply the colorscheme, you can call `require('ayu').colorscheme()` from lua or use `:colorscheme ayu` command. By default it respect your `background` (see `:h background`) setting to choose between `dark` and `light` variants. But you can use `:colorscheme ayu-<dark,light,mirage>]` commands to apply a variant directly.
+
 ## Configuration
 
-The theme contains three ayu color options: `light`, `mirage` and `dark`.
-
-It will respect your `background` (see `:h background`) setting to choose between `dark` and `light` variants.
-
-To use `mirage` variant instead of `dark` for dark background you should specify the following anywhere in your configuration:
+To configure the plugin, you can call `require('ayu').setup(values)`, where `values` is a dictionary with the parameters you want to override. Here are the defaults:
 
 ```lua
-vim.g.ayu_mirage = true
+require('ayu').setup({
+    mirage = false, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+    overrides = {}, -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+})
 ```
 
-If you want to change or add some group for highlighting you can use `vim.g.ayu_overrides`. This variable contains a dictionary with a group name which corresponds to a dictionary with parameters (bg, fg, sp and style) and colors in hex. Example:
+### Overrides example
+
+Replace `IncSearch` highlight with foreground set to `#FFFFFF`:
 
 ```lua
-vim.g.ayu_overrides = {
-  IncSearch = {fg = '#FFFFFF'}
-}
+require('ayu').setup({
+  overrides = {
+    IncSearch = {fg = '#FFFFFF'}
+  }
+})
 ```
 
-To get the colors from the theme you can use `ayu.colors`. Example:
+To get the colors from the colorscheme you can use `ayu.colors`. Example:
 
 ```lua
 local colors = require('ayu.colors')
 
-vim.g.ayu_overrides = {
-  IncSearch = {fg = colors.fg}
-}
+require('ayu').setup({
+  overrides = {
+    IncSearch = {fg = colors.fg}
+  }
+})
 ```
 
 Use `:lua print(vim.inspect(require('ayu.colors')))` command to check all available colors.
