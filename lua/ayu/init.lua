@@ -173,15 +173,6 @@ local function set_groups()
     HopNextKey2 = { fg = colors.tag },
     HopUnmatched = { fg = colors.comment },
 
-    -- Dap
-    NvimDapVirtualText = { fg = colors.regexp },
-
-    -- Visual Multi
-    VM_Extend = { bg = colors.selection_inactive },
-    VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, style = 'underline' },
-    VM_Insert = { sp = colors.fg, style = 'underline' },
-    VM_Mono = { fg = colors.bg, bg = colors.comment },
-
     -- Notify
     NotifyERROR = { fg = colors.vcs_removed },
     NotifyWARN = { fg = colors.func },
@@ -193,6 +184,9 @@ local function set_groups()
     NotifyINFOTitle = { fg = colors.string },
     NotifyDEBUGTitle = { fg = colors.ui },
     NotifyTRACETitle = { fg = colors.entity },
+
+    -- Dap
+    NvimDapVirtualText = { fg = colors.regexp },
 
     -- DAP UI
     DapUIScope = { fg = colors.func },
@@ -209,6 +203,12 @@ local function set_groups()
     DapUIBreakpointsPath = { fg = colors.regexp },
     DapUIBreakpointsInfo = { fg = colors.constant },
     DapUIBreakpointsCurrentLine = { fg = colors.constant, style = 'bold' },
+
+    -- Visual Multi
+    VM_Extend = { bg = colors.selection_inactive },
+    VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, style = 'underline' },
+    VM_Insert = { sp = colors.fg, style = 'underline' },
+    VM_Mono = { fg = colors.bg, bg = colors.comment },
   }
 
   groups = vim.tbl_extend('force', groups, config.overrides)
