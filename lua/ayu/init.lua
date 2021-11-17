@@ -173,6 +173,9 @@ local function set_groups()
     HopNextKey2 = { fg = colors.tag },
     HopUnmatched = { fg = colors.comment },
 
+    -- LSP Signature
+    LspSignatureActiveParameter = { bg = 'italic' },
+
     -- Notify
     NotifyERROR = { fg = colors.vcs_removed },
     NotifyWARN = { fg = colors.func },
