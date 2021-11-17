@@ -133,7 +133,7 @@ local function set_groups()
     TelescopePromptBorder = { fg = colors.accent },
 
     -- Cmp
-    CmpItemMenu = {fg = colors.special },
+    CmpItemMenu = { fg = colors.special },
 
     -- Word under cursor
     CursorWord = { bg = colors.selection_inactive },
