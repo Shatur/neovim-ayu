@@ -100,11 +100,6 @@ local function set_groups()
     DiagnosticInfo = { fg = colors.tag },
     DiagnosticHint = { fg = colors.regexp },
 
-    DiagnosticSignError = { fg = colors.error },
-    DiagnosticSignWarn = { fg = colors.keyword },
-    DiagnosticSignInfo = { fg = colors.tag },
-    DiagnosticSignHint = { fg = colors.regexp },
-
     DiagnosticUnderlineError = { sp = colors.error, style = 'undercurl' },
     DiagnosticUnderlineWarn = { sp = colors.keyword, style = 'undercurl' },
     DiagnosticUnderlineInfo = { sp = colors.tag, style = 'undercurl' },
