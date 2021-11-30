@@ -95,25 +95,20 @@ local function set_groups()
     DiffText = { bg = colors.vcs_diff_text },
 
     -- LSP
-    LspDiagnosticsDefaultError = { fg = colors.error },
-    LspDiagnosticsDefaultWarning = { fg = colors.keyword },
-    LspDiagnosticsDefaultInformation = { fg = colors.tag },
-    LspDiagnosticsDefaultHint = { fg = colors.regexp },
+    DiagnosticError = { fg = colors.error },
+    DiagnosticWarn = { fg = colors.keyword },
+    DiagnosticInfo = { fg = colors.tag },
+    DiagnosticHint = { fg = colors.regexp },
 
-    LspDiagnosticsSignError = { fg = colors.error },
-    LspDiagnosticsSignWarning = { fg = colors.keyword },
-    LspDiagnosticsSignInformation = { fg = colors.tag },
-    LspDiagnosticsSignHint = { fg = colors.regexp },
+    DiagnosticSignError = { fg = colors.error },
+    DiagnosticSignWarn = { fg = colors.keyword },
+    DiagnosticSignInfo = { fg = colors.tag },
+    DiagnosticSignHint = { fg = colors.regexp },
 
-    LspDiagnosticsVirtualTextError = { fg = colors.error },
-    LspDiagnosticsVirtualTextWarning = { fg = colors.keyword },
-    LspDiagnosticsVirtualTextInformation = { fg = colors.tag },
-    LspDiagnosticsVirtualTextHint = { fg = colors.regexp },
-
-    LspDiagnosticsUnderlineError = { sp = colors.error, style = 'undercurl' },
-    LspDiagnosticsUnderlineWarning = { sp = colors.keyword, style = 'undercurl' },
-    LspDiagnosticsUnderlineInformation = { sp = colors.tag, style = 'undercurl' },
-    LspDiagnosticsUnderlineHint = { sp = colors.regexp, style = 'undercurl' },
+    DiagnosticUnderlineError = { sp = colors.error, style = 'undercurl' },
+    DiagnosticUnderlineWarn = { sp = colors.keyword, style = 'undercurl' },
+    DiagnosticUnderlineInfo = { sp = colors.tag, style = 'undercurl' },
+    DiagnosticUnderlineHint = { sp = colors.regexp, style = 'undercurl' },
 
     -- Markdown
     markdownCode = { fg = colors.special },
