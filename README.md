@@ -25,6 +25,8 @@ require('ayu').setup({
 })
 ```
 
+**Tip:** You can use `:source $VIMRUNTIME/syntax/hitest.vim` to see all highlighting groups.
+
 ### Overrides example
 
 Replace `IncSearch` highlight with foreground set to `#FFFFFF`:
