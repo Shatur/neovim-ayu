@@ -25,11 +25,9 @@ require('ayu').setup({
 })
 ```
 
-**Tip:** You can use `:source $VIMRUNTIME/syntax/hitest.vim` to see all highlighting groups.
-
 ### Overrides example
 
-Replace `IncSearch` highlight with foreground set to `#FFFFFF`:
+Replace `IncSearch` group with foreground set to `#FFFFFF`:
 
 ```lua
 require('ayu').setup({
@@ -38,6 +36,8 @@ require('ayu').setup({
   }
 })
 ```
+
+**Tip:** You can use `:source $VIMRUNTIME/syntax/hitest.vim` to see all highlighting groups.
 
 To get the colors from the colorscheme you can use `ayu.colors`. Example:
 
@@ -51,4 +51,4 @@ require('ayu').setup({
 })
 ```
 
-Use `:lua print(vim.inspect(require('ayu.colors')))` command to check all available colors.
+**Tip:** You can use `:lua print(vim.inspect(require('ayu.colors')))` command to check all available colors.
