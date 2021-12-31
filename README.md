@@ -25,6 +25,16 @@ require('ayu').setup({
 })
 ```
 
+Colorscheme also provides a theme for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim). You can set in `setup` lualine:
+
+```lua
+require('lualine').setup({
+  options = {
+    theme = 'ayu',
+  },
+})
+```
+
 ### Overrides example
 
 Replace `IncSearch` group with foreground set to `#FFFFFF`:
