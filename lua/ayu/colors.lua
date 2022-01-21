@@ -41,7 +41,6 @@ function colors.generate(mirage)
       colors.vcs_removed = '#F27983'
 
       colors.vcs_added_bg = '#313D37'
-      colors.vcs_modified_bg = '#323A4C'
       colors.vcs_removed_bg = '#3E373A'
       colors.vcs_diff_text = '#465742'
 
@@ -83,7 +82,6 @@ function colors.generate(mirage)
       colors.vcs_removed = '#D96C75'
 
       colors.vcs_added_bg = '#1D2214'
-      colors.vcs_modified_bg = '#1B2733'
       colors.vcs_removed_bg = '#2D2220'
       colors.vcs_diff_text = '#363E1C'
 
@@ -126,7 +124,6 @@ function colors.generate(mirage)
     colors.vcs_removed = '#F27983'
 
     colors.vcs_added_bg = '#E0E7CD'
-    colors.vcs_modified_bg = '#E7E8E9'
     colors.vcs_removed_bg = '#F9EBE4'
     colors.vcs_diff_text = '#D3E0AF'
 
