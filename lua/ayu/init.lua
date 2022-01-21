@@ -91,7 +91,7 @@ local function set_groups()
     DiffAdded = { fg = colors.vcs_added },
     DiffDelete = { bg = colors.vcs_removed_bg },
     DiffRemoved = { fg = colors.vcs_removed },
-    DiffText = { bg = colors.vcs_diff_text },
+    DiffText = { bg = colors.gutter_normal },
     DiffChange = { bg = colors.selection_inactive },
 
     -- LSP
