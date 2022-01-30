@@ -29,6 +29,8 @@ local function set_groups()
     -- Base
     Normal = { fg = colors.fg, bg = colors.bg },
     NormalFloat = { bg = colors.bg },
+    FloatBorder = { fg = colors.comment },
+    FloatTitle = { fg = colors.fg },
     ColorColumn = { bg = colors.line },
     CursorColumn = { bg = colors.line },
     CursorLine = { bg = colors.line },
