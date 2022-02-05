@@ -42,7 +42,7 @@ Replace `IncSearch` group with foreground set to `#FFFFFF`:
 ```lua
 require('ayu').setup({
   overrides = {
-    IncSearch = {fg = '#FFFFFF'}
+    IncSearch = { fg = '#FFFFFF' }
   }
 })
 ```
@@ -53,10 +53,11 @@ To get the colors from the colorscheme you can use `ayu.colors`. Example:
 
 ```lua
 local colors = require('ayu.colors')
+colors.generate() -- Pass `true` to enable mirage
 
 require('ayu').setup({
   overrides = {
-    IncSearch = {fg = colors.fg}
+    IncSearch = { fg = colors.fg }
   }
 })
 ```
