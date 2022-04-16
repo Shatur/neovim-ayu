@@ -1,5 +1,4 @@
 local colors = require('ayu.colors')
-local utils = require('ayu.utils')
 local config = require('ayu.config')
 local ayu = {}
 
@@ -44,20 +43,20 @@ local function set_groups()
     FoldColumn = { bg = colors.bg },
     SignColumn = { bg = colors.bg },
 
-    MatchParen = { sp = colors.func, style = 'underline' },
+    MatchParen = { sp = colors.func, underline = true },
     ModeMsg = { fg = colors.string },
     MoreMsg = { fg = colors.string },
     NonText = { fg = colors.guide_normal },
     Pmenu = { fg = colors.fg, bg = colors.selection_inactive },
-    PmenuSel = { fg = colors.fg, bg = colors.selection_inactive, style = 'reverse' },
+    PmenuSel = { fg = colors.fg, bg = colors.selection_inactive, reverse = true },
     Question = { fg = colors.string },
     Search = { fg = colors.bg, bg = colors.constant },
     IncSearch = { fg = colors.keyword, bg = colors.selection_inactive },
     SpecialKey = { fg = colors.selection_inactive },
-    SpellCap = { sp = colors.tag, style = 'undercurl' },
-    SpellLocal = { sp = colors.keyword, style = 'undercurl' },
-    SpellBad = { sp = colors.error, style = 'undercurl' },
-    SpellRare = { sp = colors.regexp, style = 'undercurl' },
+    SpellCap = { sp = colors.tag, undercurl = true },
+    SpellLocal = { sp = colors.keyword, undercurl = true },
+    SpellBad = { sp = colors.error, undercurl = true },
+    SpellRare = { sp = colors.regexp, undercurl = true },
     StatusLine = { fg = colors.fg, bg = colors.panel_bg },
     StatusLineNC = { fg = colors.fg_idle, bg = colors.panel_bg },
     WildMenu = { fg = colors.fg, bg = colors.markup },
@@ -81,7 +80,7 @@ local function set_groups()
     Structure = { fg = colors.special },
     Special = { fg = colors.accent },
     Delimiter = { fg = colors.special },
-    Underlined = { fg = colors.tag, style = 'underline' },
+    Underlined = { fg = colors.tag, underline = true },
     Ignore = { fg = colors.fg },
     Error = { fg = colors.white, bg = colors.error },
     Todo = { fg = colors.markup },
@@ -102,10 +101,10 @@ local function set_groups()
     DiagnosticInfo = { fg = colors.tag },
     DiagnosticHint = { fg = colors.regexp },
 
-    DiagnosticUnderlineError = { sp = colors.error, style = 'undercurl' },
-    DiagnosticUnderlineWarn = { sp = colors.keyword, style = 'undercurl' },
-    DiagnosticUnderlineInfo = { sp = colors.tag, style = 'undercurl' },
-    DiagnosticUnderlineHint = { sp = colors.regexp, style = 'undercurl' },
+    DiagnosticUnderlineError = { sp = colors.error, undercurl = true },
+    DiagnosticUnderlineWarn = { sp = colors.keyword, undercurl = true },
+    DiagnosticUnderlineInfo = { sp = colors.tag, undercurl = true },
+    DiagnosticUnderlineHint = { sp = colors.regexp, undercurl = true },
 
     -- Markdown
     markdownCode = { fg = colors.special },
@@ -114,7 +113,7 @@ local function set_groups()
     TSProperty = { fg = colors.tag },
     TSField = { fg = colors.tag },
     TSParameter = { fg = colors.fg },
-    TSUnderline = { sp = colors.tag, style = 'underline' },
+    TSUnderline = { sp = colors.tag, underline = true },
 
     -- Gitsigns
     GitSignsAdd = { fg = colors.vcs_added },
@@ -173,7 +172,7 @@ local function set_groups()
     NvimTreeExecFile = { fg = colors.fg },
     NvimTreeIndentMarker = { fg = colors.guide_normal },
 
-    NvimTreeWindowPicker = { fg = colors.keyword, bg = colors.panel_border, style = 'bold' },
+    NvimTreeWindowPicker = { fg = colors.keyword, bg = colors.panel_border, bold = true },
 
     -- WhichKey
     WhichKeyFloat = { bg = colors.bg },
@@ -186,13 +185,13 @@ local function set_groups()
     NeogitDiffDeleteHighlight = { bg = colors.vcs_removed_bg },
 
     -- Hop
-    HopNextKey = { fg = colors.keyword, style = 'bold,underline' },
-    HopNextKey1 = { fg = colors.entity, style = 'bold,underline' },
+    HopNextKey = { fg = colors.keyword, bold = true, underline = true },
+    HopNextKey1 = { fg = colors.entity, bold = true, underline = true },
     HopNextKey2 = { fg = colors.tag },
     HopUnmatched = { fg = colors.comment },
 
     -- LSP Signature
-    LspSignatureActiveParameter = { bg = 'italic' },
+    LspSignatureActiveParameter = { italic = true },
 
     -- Notify
     NotifyERROR = { fg = colors.vcs_removed },
@@ -223,19 +222,19 @@ local function set_groups()
     DapUIWatchesError = { fg = colors.error },
     DapUIBreakpointsPath = { fg = colors.regexp },
     DapUIBreakpointsInfo = { fg = colors.constant },
-    DapUIBreakpointsCurrentLine = { fg = colors.constant, style = 'bold' },
+    DapUIBreakpointsCurrentLine = { fg = colors.constant, bold = true },
 
     -- Visual Multi
     VM_Extend = { bg = colors.selection_inactive },
-    VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, style = 'underline' },
-    VM_Insert = { sp = colors.fg, style = 'underline' },
+    VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, underline = true },
+    VM_Insert = { sp = colors.fg, underline = true },
     VM_Mono = { fg = colors.bg, bg = colors.comment },
   }
 
   groups = vim.tbl_extend('force', groups, config.overrides)
 
   for group, parameters in pairs(groups) do
-    utils.highlight(group, parameters)
+    vim.api.nvim_set_hl(0, group, parameters)
   end
 end
 
@@ -244,6 +243,11 @@ function ayu.setup(values)
 end
 
 function ayu.colorscheme()
+  if not vim.fn.has('nvim-0.7.0') then
+    vim.notify('Neovim 0.7+ is required for ayu colorscheme')
+    return
+  end
+
   vim.api.nvim_command('hi clear')
   if vim.fn.exists('syntax_on') then
     vim.api.nvim_command('syntax reset')
