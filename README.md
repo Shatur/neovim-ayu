@@ -12,7 +12,7 @@ A colorscheme for Neovim 0.7+ reimplemented in lua from [ayu-vim](https://github
 
 ## Commands
 
-To apply the colorscheme, you can call `require('ayu').colorscheme()` from lua or use `:colorscheme ayu` command. By default it respect your `background` (see `:h background`) setting to choose between `dark` and `light` variants. But you can use `:colorscheme ayu-<dark,light,mirage>]` commands to apply a variant directly.
+To apply the colorscheme, you can call `require('ayu').colorscheme()` from lua or use `:colorscheme ayu` command. By default it respects your `'background'` (see `:h background`) setting to choose between `dark` and `light` variants. But you can use the `:colorscheme ayu-dark`, `:colorscheme ayu-light`, or `:colorscheme ayu-mirage` commands to apply a variant directly.
 
 ## Configuration
 
@@ -25,7 +25,7 @@ require('ayu').setup({
 })
 ```
 
-Alternatively, `overrides` can be a function that returns a dictionary of the same format. You can use the function to override based on a dynamic condition, such as the value of `&background`.
+Alternatively, `overrides` can be a function that returns a dictionary of the same format. You can use the function to override based on a dynamic condition, such as the value of `'background'`.
 
 Colorscheme also provides a theme for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim). You can set in `setup` lualine:
 
@@ -54,10 +54,11 @@ require('ayu').setup({
 ```lua
 require 'ayu'.setup({
   overrides = function()
-    return vim.o.background == 'dark' and
-          { NormalNC = {bg = '#0f151e', fg = '#808080'} }
-          or
-          { NormalNC = {bg = '#f0f0f0', fg = '#808080'} }
+    if vim.o.background == 'dark' then
+      return { NormalNC = {bg = '#0f151e', fg = '#808080'} }
+    else
+      return { NormalNC = {bg = '#f0f0f0', fg = '#808080'} }
+    end
   end
 })
 
@@ -65,7 +66,7 @@ require 'ayu'.setup({
 
 **Tip:** You can use `:source $VIMRUNTIME/syntax/hitest.vim` to see all highlighting groups.
 
-To get the colors from the colorscheme you can use `ayu.colors`. Example:
+3. To get the colors from the colorscheme you can use `ayu.colors`:
 
 ```lua
 local colors = require('ayu.colors')
