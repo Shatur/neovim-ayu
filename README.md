@@ -12,7 +12,7 @@ A colorscheme for Neovim 0.7+ reimplemented in lua from [ayu-vim](https://github
 
 ## Commands
 
-To apply the colorscheme, you can call `require('ayu').colorscheme()` from lua or use `:colorscheme ayu` command. By default it respect your `background` (see `:h background`) setting to choose between `dark` and `light` variants. But you can use `:colorscheme ayu-<dark,light,mirage>]` commands to apply a variant directly.
+To apply the colorscheme, you can call `require('ayu').colorscheme()` from lua or use `:colorscheme ayu` command. By default it respects your `'background'` (see `:h background`) setting to choose between `dark` and `light` variants. But you can use the `:colorscheme ayu-dark`, `:colorscheme ayu-light`, or `:colorscheme ayu-mirage` commands to apply a variant directly.
 
 ## Configuration
 
@@ -21,9 +21,11 @@ To configure the plugin, you can call `require('ayu').setup(values)`, where `val
 ```lua
 require('ayu').setup({
     mirage = false, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
-    overrides = {}, -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+    overrides = {}, -- A dictionary of group names, each associated with a dictionary of parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
 })
 ```
+
+Alternatively, `overrides` can be a function that returns a dictionary of the same format. You can use the function to override based on a dynamic condition, such as the value of `'background'`.
 
 Colorscheme also provides a theme for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim). You can set in `setup` lualine:
 
@@ -35,9 +37,9 @@ require('lualine').setup({
 })
 ```
 
-### Overrides example
+### `overrides` Examples
 
-Replace `IncSearch` group with foreground set to `#FFFFFF`:
+1. Replace `IncSearch` group with foreground set to `#FFFFFF`:
 
 ```lua
 require('ayu').setup({
@@ -47,9 +49,24 @@ require('ayu').setup({
 })
 ```
 
+2. Change the background color of non-active windows to make the active one more obvious, specifying overrides for both light and dark backgrounds:
+
+```lua
+require 'ayu'.setup({
+  overrides = function()
+    if vim.o.background == 'dark' then
+      return { NormalNC = {bg = '#0f151e', fg = '#808080'} }
+    else
+      return { NormalNC = {bg = '#f0f0f0', fg = '#808080'} }
+    end
+  end
+})
+
+```
+
 **Tip:** You can use `:source $VIMRUNTIME/syntax/hitest.vim` to see all highlighting groups.
 
-To get the colors from the colorscheme you can use `ayu.colors`. Example:
+3. To get the colors from the colorscheme you can use `ayu.colors`:
 
 ```lua
 local colors = require('ayu.colors')
