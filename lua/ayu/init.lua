@@ -151,6 +151,7 @@ local function set_groups()
     CmpItemKindEvent = { fg = colors.tag },
     CmpItemKindOperator = { fg = colors.operator },
     CmpItemKindTypeParameter = { fg = colors.tag },
+    CmpItemMenu = { fg = colors.comment },
 
     -- Word under cursor
     CursorWord = { bg = colors.selection_inactive },
