@@ -175,6 +175,9 @@ local function set_groups()
 
     NvimTreeWindowPicker = { fg = colors.keyword, bg = colors.panel_border, bold = true },
 
+    -- Neo-tree
+    NeoTreeRootName = { fg = colors.fg, bold = true },
+
     -- WhichKey
     WhichKeyFloat = { bg = colors.bg },
 
