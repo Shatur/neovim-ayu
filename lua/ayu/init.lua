@@ -181,6 +181,9 @@ local function set_groups()
     -- WhichKey
     WhichKeyFloat = { bg = colors.bg },
 
+    -- Indent blankline
+    IndentBlanklineContextChar = { fg = colors.comment },
+
     -- Neogit
     NeogitDiffContextHighlight = { bg = colors.line },
     NeogitHunkHeader = { fg = colors.tag },
