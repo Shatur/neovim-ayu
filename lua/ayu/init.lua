@@ -118,6 +118,7 @@ local function set_groups()
     -- Gitsigns
     GitSignsAddLn = { fg = colors.vcs_added },
     GitSignsDeleteLn = { fg = colors.vcs_removed },
+    GitSignsChange = { fg = colors.vcs_modified },
 
     -- Telescope
     TelescopePromptBorder = { fg = colors.accent },
