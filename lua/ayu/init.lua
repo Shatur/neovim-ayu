@@ -116,9 +116,8 @@ local function set_groups()
     TSUnderline = { sp = colors.tag, underline = true },
 
     -- Gitsigns
-    GitSignsAdd = { fg = colors.vcs_added },
-    GitSignsChange = { fg = colors.vcs_modified },
-    GitSignsDelete = { fg = colors.vcs_removed },
+    GitSignsAddLn = { fg = colors.vcs_added },
+    GitSignsDeleteLn = { fg = colors.vcs_removed },
 
     -- Telescope
     TelescopePromptBorder = { fg = colors.accent },
