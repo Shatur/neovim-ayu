@@ -85,6 +85,7 @@ local function set_groups()
     Error = { fg = colors.white, bg = colors.error },
     Todo = { fg = colors.markup },
     qfLineNr = { fg = colors.keyword },
+    qfError = { fg = colors.error },
     Conceal = { fg = colors.comment },
     CursorLineConceal = { fg = colors.guide_normal, bg = colors.line },
 
