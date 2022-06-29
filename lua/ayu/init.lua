@@ -251,7 +251,7 @@ function ayu.setup(values)
 end
 
 function ayu.colorscheme()
-  if not vim.fn.has('nvim-0.7.0') then
+  if vim.version().minor < 7 then
     vim.notify('Neovim 0.7+ is required for ayu colorscheme', vim.log.levels.ERROR, { title = 'Ayu colorscheme' })
     return
   end
