@@ -199,6 +199,12 @@ local function set_groups()
     HopNextKey2 = { fg = colors.tag },
     HopUnmatched = { fg = colors.comment },
 
+    -- Leap
+    LeapMatch = { fg = colors.regexp, underline = true },
+    LeapLabelPrimary = { fg = colors.bg, bg = colors.regexp },
+    LeapLabelSecondary = { fg = colors.bg, bg = colors.entity },
+    LeapLabelSelected = { fg = colors.bg, bg = colors.tag },
+
     -- LSP Signature
     LspSignatureActiveParameter = { italic = true },
 
