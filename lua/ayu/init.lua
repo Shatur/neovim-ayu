@@ -253,9 +253,7 @@ local function set_groups()
   end
 end
 
-function ayu.setup(values)
-  setmetatable(config, { __index = vim.tbl_extend('force', config.defaults, values) })
-end
+function ayu.setup(values) setmetatable(config, { __index = vim.tbl_extend('force', config.defaults, values) }) end
 
 function ayu.colorscheme()
   if vim.version().minor < 7 then
