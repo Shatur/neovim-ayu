@@ -31,7 +31,7 @@ local function set_groups()
     FloatBorder = { fg = colors.comment },
     FloatTitle = { fg = colors.fg },
     ColorColumn = { bg = colors.line },
-    Cursor = { bg = colors.line },
+    Cursor = { fg = colors.bg, bg = colors.fg },
     CursorColumn = { bg = colors.line },
     CursorLine = { bg = colors.line },
     CursorLineNr = { fg = colors.accent, bg = colors.line },
