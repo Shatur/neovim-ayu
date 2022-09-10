@@ -37,7 +37,7 @@ require('lualine').setup({
 })
 ```
 
-### `overrides` Examples
+### Overrides Examples
 
 1. Replace `IncSearch` group with foreground set to `#FFFFFF`:
 

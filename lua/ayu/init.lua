@@ -2,6 +2,7 @@ local colors = require('ayu.colors')
 local config = require('ayu.config')
 local ayu = {}
 
+--- Apply terminal highlighting.
 local function set_terminal_colors()
   vim.g.terminal_color_0 = colors.bg
   vim.g.terminal_color_1 = colors.markup
@@ -23,9 +24,10 @@ local function set_terminal_colors()
   vim.g.terminal_color_foreground = colors.fg
 end
 
+--- Apply groups highlighting.
 local function set_groups()
   local groups = {
-    -- Base
+    -- Base.
     Normal = { fg = colors.fg, bg = colors.bg },
     NormalFloat = { bg = colors.bg },
     FloatBorder = { fg = colors.comment },
@@ -97,7 +99,7 @@ local function set_groups()
     DiffText = { bg = colors.gutter_normal },
     DiffChange = { bg = colors.selection_inactive },
 
-    -- LSP
+    -- LSP.
     DiagnosticError = { fg = colors.error },
     DiagnosticWarn = { fg = colors.keyword },
     DiagnosticInfo = { fg = colors.tag },
@@ -108,24 +110,24 @@ local function set_groups()
     DiagnosticUnderlineInfo = { sp = colors.tag, undercurl = true },
     DiagnosticUnderlineHint = { sp = colors.regexp, undercurl = true },
 
-    -- Markdown
+    -- Markdown.
     markdownCode = { fg = colors.special },
 
-    -- TreeSitter
+    -- TreeSitter.
     TSProperty = { fg = colors.tag },
     TSField = { fg = colors.tag },
     TSParameter = { fg = colors.fg },
     TSUnderline = { sp = colors.tag, underline = true },
 
-    -- Gitsigns
+    -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
     GitSignsDeleteLn = { fg = colors.vcs_removed },
     GitSignsChange = { fg = colors.vcs_modified },
 
-    -- Telescope
+    -- Telescope.
     TelescopePromptBorder = { fg = colors.accent },
 
-    -- Cmp
+    -- Cmp.
     CmpItemAbbrMatch = { fg = colors.keyword },
     CmpItemAbbrMatchFuzzy = { fg = colors.func },
     CmpItemKindText = { fg = colors.string },
@@ -155,12 +157,12 @@ local function set_groups()
     CmpItemKindTypeParameter = { fg = colors.tag },
     CmpItemMenu = { fg = colors.comment },
 
-    -- Word under cursor
+    -- Word under cursor.
     CursorWord = { bg = colors.selection_inactive },
     CursorWord0 = { bg = colors.selection_inactive },
     CursorWord1 = { bg = colors.selection_inactive },
 
-    -- NvimTree
+    -- NvimTree.
     NvimTreeGitDirty = { fg = colors.accent },
     NvimTreeGitStaged = { fg = colors.vcs_modified },
     NvimTreeGitMerge = { fg = colors.error },
@@ -177,38 +179,38 @@ local function set_groups()
 
     NvimTreeWindowPicker = { fg = colors.keyword, bg = colors.panel_border, bold = true },
 
-    -- Neo-tree
+    -- Neo-tree.
     NeoTreeRootName = { fg = colors.fg, bold = true },
 
-    -- WhichKey
+    -- WhichKey.
     WhichKeyFloat = { bg = colors.bg },
 
-    -- Indent blankline
+    -- Indent blankline.
     IndentBlanklineContextChar = { fg = colors.comment },
 
-    -- Neogit
+    -- Neogit.
     NeogitDiffContextHighlight = { bg = colors.line },
     NeogitHunkHeader = { fg = colors.tag },
     NeogitHunkHeaderHighlight = { fg = colors.tag, bg = colors.line },
     NeogitDiffAddHighlight = { bg = colors.vcs_added_bg },
     NeogitDiffDeleteHighlight = { bg = colors.vcs_removed_bg },
 
-    -- Hop
+    -- Hop.
     HopNextKey = { fg = colors.keyword, bold = true, underline = true },
     HopNextKey1 = { fg = colors.entity, bold = true, underline = true },
     HopNextKey2 = { fg = colors.tag },
     HopUnmatched = { fg = colors.comment },
 
-    -- Leap
+    -- Leap.
     LeapMatch = { fg = colors.regexp, underline = true },
     LeapLabelPrimary = { fg = colors.bg, bg = colors.regexp },
     LeapLabelSecondary = { fg = colors.bg, bg = colors.entity },
     LeapLabelSelected = { fg = colors.bg, bg = colors.tag },
 
-    -- LSP Signature
+    -- LSP Signature.
     LspSignatureActiveParameter = { italic = true },
 
-    -- Notify
+    -- Notify.
     NotifyERROR = { fg = colors.vcs_removed },
     NotifyWARN = { fg = colors.func },
     NotifyINFO = { fg = colors.vcs_added },
@@ -220,10 +222,10 @@ local function set_groups()
     NotifyDEBUGTitle = { fg = colors.ui },
     NotifyTRACETitle = { fg = colors.entity },
 
-    -- Dap
+    -- Dap.
     NvimDapVirtualText = { fg = colors.regexp },
 
-    -- DAP UI
+    -- DAP UI.
     DapUIScope = { fg = colors.func },
     DapUIType = { fg = colors.entity },
     DapUIDecoration = { fg = colors.tag },
@@ -239,7 +241,7 @@ local function set_groups()
     DapUIBreakpointsInfo = { fg = colors.constant },
     DapUIBreakpointsCurrentLine = { fg = colors.constant, bold = true },
 
-    -- Visual Multi
+    -- Visual Multi.
     VM_Extend = { bg = colors.selection_inactive },
     VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, underline = true },
     VM_Insert = { sp = colors.fg, underline = true },
@@ -253,8 +255,11 @@ local function set_groups()
   end
 end
 
+--- Apply user settings.
+---@param values table
 function ayu.setup(values) setmetatable(config, { __index = vim.tbl_extend('force', config.defaults, values) }) end
 
+--- Set the colorscheme.
 function ayu.colorscheme()
   if vim.version().minor < 7 then
     vim.notify('Neovim 0.7+ is required for ayu colorscheme', vim.log.levels.ERROR, { title = 'Ayu colorscheme' })
