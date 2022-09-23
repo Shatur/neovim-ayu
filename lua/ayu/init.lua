@@ -70,13 +70,13 @@ local function set_groups()
     Visual = { bg = colors.selection_inactive },
     WarningMsg = { fg = colors.warning },
 
-    Comment = { fg = colors.comment },
+    Comment = { fg = colors.comment, italic = true },
     Constant = { fg = colors.constant },
-    String = { fg = colors.string },
+    String = { fg = colors.string, italic = true },
     Identifier = { fg = colors.entity },
     Function = { fg = colors.func },
     Statement = { fg = colors.keyword },
-    Operator = { fg = colors.operator },
+    Operator = { fg = colors.operator, italic = true },
     Exception = { fg = colors.markup },
     PreProc = { fg = colors.accent },
     Type = { fg = colors.entity },
@@ -86,7 +86,7 @@ local function set_groups()
     Underlined = { fg = colors.tag, underline = true },
     Ignore = { fg = colors.fg },
     Error = { fg = colors.white, bg = colors.error },
-    Todo = { fg = colors.markup },
+    Todo = { fg = colors.markup, italic = true },
     qfLineNr = { fg = colors.keyword },
     qfError = { fg = colors.error },
     Conceal = { fg = colors.comment },
@@ -116,7 +116,7 @@ local function set_groups()
     -- TreeSitter.
     TSProperty = { fg = colors.tag },
     TSField = { fg = colors.tag },
-    TSParameter = { fg = colors.fg },
+    TSParameter = { fg = colors.fg, italic = true },
     TSUnderline = { sp = colors.tag, underline = true },
 
     -- Gitsigns.
