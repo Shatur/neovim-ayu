@@ -37,9 +37,9 @@ require('lualine').setup({
 })
 ```
 
-### Overrides Examples
+### Overrides examples
 
-1. Replace `IncSearch` group with foreground set to `#FFFFFF`:
+#### Replace `IncSearch` group with foreground set to `#FFFFFF`
 
 ```lua
 require('ayu').setup({
@@ -49,24 +49,9 @@ require('ayu').setup({
 })
 ```
 
-2. Change the background color of non-active windows to make the active one more obvious, specifying overrides for both light and dark backgrounds:
-
-```lua
-require 'ayu'.setup({
-  overrides = function()
-    if vim.o.background == 'dark' then
-      return { NormalNC = {bg = '#0f151e', fg = '#808080'} }
-    else
-      return { NormalNC = {bg = '#f0f0f0', fg = '#808080'} }
-    end
-  end
-})
-
-```
-
 **Tip:** You can use `:source $VIMRUNTIME/syntax/hitest.vim` to see all highlighting groups.
 
-3. To get the colors from the colorscheme you can use `ayu.colors`:
+#### Re-use colors from the colorscheme
 
 ```lua
 local colors = require('ayu.colors')
@@ -80,3 +65,34 @@ require('ayu').setup({
 ```
 
 **Tip:** You can use `:lua print(vim.inspect(require('ayu.colors')))` command to check all available colors.
+
+#### Set background color of non-active windows for both light and dark backgrounds
+
+In this case you need to use a function to dynamically generate colors:
+
+```lua
+require('ayu').setup({
+  overrides = function()
+    if vim.o.background == 'dark' then
+      return { NormalNC = {bg = '#0f151e', fg = '#808080'} }
+    else
+      return { NormalNC = {bg = '#f0f0f0', fg = '#808080'} }
+    end
+  end
+})
+```
+
+**Tip:** If you use `ayu.colors` as in the example above, you don't need to check for `vim.o.background`, but you still need to use a function.
+
+#### Disable _italic_ for comments
+
+```lua
+local colors = require('ayu.colors')
+colors.generate() -- Pass `true` to enable mirage
+
+require('ayu').setup({
+  overrides = function()
+    return { Comment = { fg = colors.comment } }
+  end
+})
+```
