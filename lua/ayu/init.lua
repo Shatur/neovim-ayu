@@ -118,6 +118,7 @@ local function set_groups()
     ['@property'] = { fg = colors.tag },
     ['@field'] = { fg = colors.tag },
     ['@parameter'] = { fg = colors.fg },
+    ['@namespace'] = { fg = colors.func },
 
     -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
