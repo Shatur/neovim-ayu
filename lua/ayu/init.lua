@@ -84,7 +84,7 @@ local function set_groups()
     Structure = { fg = colors.special },
     Special = { fg = colors.accent },
     Delimiter = { fg = colors.special },
-    Underlined = { fg = colors.tag, underline = true },
+    Underlined = { sp = colors.tag, underline = true },
     Ignore = { fg = colors.fg },
     Error = { fg = colors.white, bg = colors.error },
     Todo = { fg = colors.markup },
@@ -115,10 +115,9 @@ local function set_groups()
     markdownCode = { fg = colors.special },
 
     -- TreeSitter.
-    TSProperty = { fg = colors.tag },
-    TSField = { fg = colors.tag },
-    TSParameter = { fg = colors.fg },
-    TSUnderline = { sp = colors.tag, underline = true },
+    ['@property'] = { fg = colors.tag },
+    ['@field'] = { fg = colors.tag },
+    ['@parameter'] = { fg = colors.fg },
 
     -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
