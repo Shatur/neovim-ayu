@@ -263,8 +263,8 @@ function ayu.setup(values) setmetatable(config, { __index = vim.tbl_extend('forc
 
 --- Set the colorscheme.
 function ayu.colorscheme()
-  if vim.version().minor < 7 then
-    vim.notify('Neovim 0.7+ is required for ayu colorscheme', vim.log.levels.ERROR, { title = 'Ayu colorscheme' })
+  if vim.version().minor < 8 then
+    vim.notify('Neovim 0.8+ is required for ayu colorscheme', vim.log.levels.ERROR, { title = 'Ayu colorscheme' })
     return
   end
 
