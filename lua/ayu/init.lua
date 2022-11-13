@@ -122,6 +122,7 @@ local function set_groups()
     ['@variable.builtin'] = { fg = colors.func },
     ['@text.title'] = { fg = colors.keyword },
     ['@type.qualifier'] = { fg = colors.keyword },
+    ['@storageclass'] = { fg = colors.keyword },
     ['@tag'] = { fg = colors.keyword },
     ['@tag.attribute'] = { fg = colors.tag },
     ['@tag.delimiter'] = { link = 'Delimiter' },
