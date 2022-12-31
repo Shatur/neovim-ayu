@@ -250,6 +250,35 @@ local function set_groups()
     DapUIBreakpointsInfo = { fg = colors.constant },
     DapUIBreakpointsCurrentLine = { fg = colors.constant, bold = true },
 
+    -- Navic
+    NavicIconsFile = { default = true, bg = "#000000", fg = colors.special },
+    NavicIconsModule = { default = true, bg = "#000000", fg = colors.keyword },
+    --   NavicIconsNamespace = { default = true, bg = "#000000", fg = "#ffffff" },
+    --   NavicIconsPackage = { default = true, bg = "#000000", fg = "#ffffff" },
+    NavicIconsClass = { default = true, bg = "#000000", fg = colors.entity },
+    NavicIconsMethod = { default = true, bg = "#000000", fg = colors.keyword },
+    NavicIconsProperty = { default = true, bg = "#000000", fg = colors.keyword },
+    NavicIconsField = { default = true, bg = "#000000", fg = colors.entity },
+    NavicIconsConstructor = { default = true, bg = "#000000", fg = colors.keyword },
+    NavicIconsEnum = { default = true, bg = "#000000", fg = colors.entity },
+    NavicIconsInterface = { default = true, bg = "#000000", fg = colors.entity },
+    NavicIconsFunction = { default = true, bg = "#000000", fg = colors.func },
+    NavicIconsVariable = { default = true, bg = "#000000", fg = colors.tag },
+    NavicIconsConstant = { default = true, bg = "#000000", fg = colors.constant },
+    NavicIconsString = { default = true, bg = "#000000", fg = colors.string },
+    NavicIconsNumber = { default = true, bg = "#000000", fg = colors.constant },
+    NavicIconsBoolean = { default = true, bg = "#000000", fg = colors.constant },
+    NavicIconsArray = { default = true, bg = "#000000", fg = colors.special },
+    NavicIconsObject = { default = true, bg = "#000000", fg = colors.special },
+    --   NavicIconsKey = { default = true, bg = "#000000", fg = "#ffffff" },
+    --   NavicIconsNull = { default = true, bg = "#000000", fg = "#ffffff" },
+    NavicIconsEnumMember = { default = true, bg = "#000000", fg = colors.constant },
+    NavicIconsStruct = { default = true, bg = "#000000", fg = colors.entity },
+    NavicIconsEvent = { default = true, bg = "#000000", fg = colors.tag },
+    NavicIconsOperator = { default = true, bg = "#000000", fg = colors.operator },
+    NavicIconsTypeParameter = { default = true, bg = "#000000", fg = colors.tag },
+    NavicText = { default = true, bg = "#000000", fg = colors.fg },
+
     -- Visual Multi.
     VM_Extend = { bg = colors.selection_inactive },
     VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, underline = true },
@@ -257,7 +286,8 @@ local function set_groups()
     VM_Mono = { fg = colors.bg, bg = colors.comment },
   }
 
-  groups = vim.tbl_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
+  groups = vim.tbl_extend('force', groups,
+    type(config.overrides) == 'function' and config.overrides() or config.overrides)
 
   for group, parameters in pairs(groups) do
     vim.api.nvim_set_hl(0, group, parameters)
