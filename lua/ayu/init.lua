@@ -124,7 +124,7 @@ local function set_groups()
     ['@type.qualifier'] = { fg = colors.keyword },
     ['@storageclass'] = { fg = colors.keyword },
     ['@tag'] = { fg = colors.keyword },
-    ['@tag.attribute'] = { fg = colors.tag },
+    ['@tag.attribute'] = { fg = colors.entity },
     ['@tag.delimiter'] = { link = 'Delimiter' },
     ['@variable'] = { link = 'Normal' },
 
