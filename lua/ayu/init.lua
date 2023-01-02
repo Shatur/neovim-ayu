@@ -220,7 +220,6 @@ local function set_groups()
     LspSignatureActiveParameter = { italic = true },
 
     -- Notify.
-    NotifyBackground = { bg = colors.bg },
     NotifyERROR = { fg = colors.vcs_removed },
     NotifyWARN = { fg = colors.func },
     NotifyINFO = { fg = colors.vcs_added },
