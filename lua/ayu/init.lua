@@ -28,7 +28,7 @@ end
 local function set_groups()
   local groups = {
     -- Base.
-    Normal = { fg = colors.fg },
+    Normal = { fg = colors.fg, bg = colors.bg },
     NormalFloat = { bg = colors.bg },
     FloatBorder = { fg = colors.comment },
     FloatTitle = { fg = colors.fg },
