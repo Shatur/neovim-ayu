@@ -126,7 +126,7 @@ local function set_groups()
     ['@tag'] = { fg = colors.keyword },
     ['@tag.attribute'] = { fg = colors.entity },
     ['@tag.delimiter'] = { link = 'Delimiter' },
-    ['@variable'] = { link = 'Normal' },
+    ['@variable'] = { fg = colors.fg },
 
     -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
