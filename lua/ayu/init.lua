@@ -171,6 +171,9 @@ local function set_groups()
     CursorWord0 = { bg = colors.selection_inactive },
     CursorWord1 = { bg = colors.selection_inactive },
 
+    -- Noice
+    NoiceLspProgressTitle = { fg = colors.fg },
+
     -- NvimTree.
     NvimTreeGitDirty = { fg = colors.accent },
     NvimTreeGitStaged = { fg = colors.vcs_modified },
