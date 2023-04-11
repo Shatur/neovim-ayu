@@ -128,6 +128,22 @@ local function set_groups()
     ['@tag.delimiter'] = { link = 'Delimiter' },
     ['@variable'] = { fg = colors.fg },
 
+    ['@lsp.type.namespace'] = { link = '@namespace' },
+    ['@lsp.type.type'] = { link = '@type' },
+    ['@lsp.type.class'] = { link = '@type' },
+    ['@lsp.type.enum'] = { link = '@type' },
+    ['@lsp.type.interface'] = { link = '@type' },
+    ['@lsp.type.struct'] = { link = '@structure' },
+    ['@lsp.type.parameter'] = { link = '@parameter' },
+    ['@lsp.type.field'] = { link = '@field' },
+    ['@lsp.type.variable'] = { link = '@variable' },
+    ['@lsp.type.property'] = { link = '@property' },
+    ['@lsp.type.enumMember'] = { link = '@constant' },
+    ['@lsp.type.function'] = { link = '@function' },
+    ['@lsp.type.method'] = { link = '@method' },
+    ['@lsp.type.macro'] = { link = '@macro' },
+    ['@lsp.type.decorator'] = { link = '@function' },
+
     -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
     GitSignsDeleteLn = { fg = colors.vcs_removed },
