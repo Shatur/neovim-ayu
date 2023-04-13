@@ -117,7 +117,7 @@ local function set_groups()
     -- TreeSitter.
     ['@property'] = { fg = colors.tag },
     ['@field'] = { fg = colors.tag },
-    ['@parameter'] = { fg = colors.fg },
+    ['@parameter'] = { fg = colors.parameter },
     ['@namespace'] = { fg = colors.func },
     ['@variable.builtin'] = { fg = colors.func },
     ['@text.title'] = { fg = colors.keyword },
