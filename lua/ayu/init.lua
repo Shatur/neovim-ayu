@@ -143,6 +143,7 @@ local function set_groups()
     ['@lsp.type.method'] = { link = '@method' },
     ['@lsp.type.macro'] = { link = '@macro' },
     ['@lsp.type.decorator'] = { link = '@function' },
+    ['@lsp.mod.constant'] = { link = '@constant' },
 
     -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
