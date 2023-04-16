@@ -134,7 +134,7 @@ local function set_groups()
     ['@lsp.type.enum'] = { link = '@type' },
     ['@lsp.type.interface'] = { link = '@type' },
     ['@lsp.type.struct'] = { link = '@structure' },
-    ['@lsp.type.parameter'] = { link = '@parameter' },
+    ['@lsp.type.parameter'] = { fg = colors.lsp_parameter },
     ['@lsp.type.field'] = { link = '@field' },
     ['@lsp.type.variable'] = { link = '@variable' },
     ['@lsp.type.property'] = { link = '@property' },
