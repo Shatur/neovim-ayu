@@ -25,7 +25,7 @@ function colors.generate(mirage)
       colors.constant = '#D4BFFF'
       colors.operator = '#F29E74'
       colors.error = '#FF3333'
-      colors.parameter = '#D3B8F9'
+      colors.lsp_parameter = '#D3B8F9'
 
       colors.line = '#191E2A'
       colors.panel_bg = '#232834'
@@ -66,7 +66,7 @@ function colors.generate(mirage)
       colors.constant = '#FFEE99'
       colors.operator = '#F29668'
       colors.error = '#FF3333'
-      colors.parameter = '#CB9FF8'
+      colors.lsp_parameter = '#CB9FF8'
 
       colors.line = '#00010A'
       colors.panel_bg = '#0D1016'
@@ -108,7 +108,7 @@ function colors.generate(mirage)
     colors.constant = '#A37ACC'
     colors.operator = '#ED9366'
     colors.error = '#F51818'
-    colors.parameter = '#C788CE'
+    colors.lsp_parameter = '#C788CE'
 
     colors.line = '#EFF0F1'
     colors.panel_bg = '#FFFFFF'
