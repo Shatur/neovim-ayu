@@ -39,13 +39,21 @@ require('lualine').setup({
 
 ### Overrides examples
 
-#### Replace `IncSearch` group with foreground set to `#FFFFFF`
+#### Transparency
 
 ```lua
 require('ayu').setup({
-  overrides = {
-    IncSearch = { fg = '#FFFFFF' }
-  }
+    overrides = {
+        Normal = { bg = "None" },
+        ColorColumn = { bg = "None" },
+        SignColumn = { bg = "None" },
+        Folded = { bg = "None" },
+        FoldColumn = { bg = "None" },
+        CursorLine = { bg = "None" },
+        CursorColumn = { bg = "None" },
+        WhichKeyFloat = { bg = "None" },
+        VertSplit = { bg = "None" },
+    },
 })
 ```
 
