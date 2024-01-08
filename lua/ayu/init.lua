@@ -145,6 +145,9 @@ local function set_groups()
     ['@lsp.type.decorator'] = { link = '@function' },
     ['@lsp.mod.constant'] = { link = '@constant' },
 
+    -- TreesitterContext.
+    TreesitterContext = { bg = colors.selection_inactive },
+
     -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
     GitSignsDeleteLn = { fg = colors.vcs_removed },
