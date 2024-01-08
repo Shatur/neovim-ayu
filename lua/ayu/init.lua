@@ -145,6 +145,9 @@ local function set_groups()
     ['@lsp.type.decorator'] = { link = '@function' },
     ['@lsp.mod.constant'] = { link = '@constant' },
 
+    -- TreesitterContext.
+    TreesitterContext = { bg = colors.selection_inactive },
+
     -- Gitsigns.
     GitSignsAddLn = { fg = colors.vcs_added },
     GitSignsDeleteLn = { fg = colors.vcs_removed },
@@ -276,9 +279,6 @@ local function set_groups()
     VM_Cursor = { bg = colors.selection_inactive, sp = colors.fg, underline = true },
     VM_Insert = { sp = colors.fg, underline = true },
     VM_Mono = { fg = colors.bg, bg = colors.comment },
-
-    -- TreesitterContext.
-    TreesitterContext = { bg = colors.selection_inactive },
   }
 
   groups = vim.tbl_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
