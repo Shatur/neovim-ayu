@@ -116,6 +116,7 @@ local function set_groups()
 
     -- TreeSitter.
     ['@property'] = { fg = colors.tag },
+    ['@attribute'] = { fg = colors.special },
     ['@tag'] = { fg = colors.keyword },
     ['@tag.attribute'] = { fg = colors.entity },
     ['@tag.delimiter'] = { link = 'Delimiter' },
@@ -126,14 +127,13 @@ local function set_groups()
     ['@module'] = { fg = colors.func },
     ['@markup.heading'] = { fg = colors.keyword },
     ['@keyword.storage'] = { fg = colors.keyword },
-    ['@structure'] = { fg = colors.special },
 
     ['@lsp.type.namespace'] = { link = '@module' },
     ['@lsp.type.type'] = { link = '@type' },
     ['@lsp.type.class'] = { link = '@type' },
     ['@lsp.type.enum'] = { link = '@type' },
     ['@lsp.type.interface'] = { link = '@type' },
-    ['@lsp.type.struct'] = { link = '@structure' },
+    ['@lsp.type.struct'] = { link = '@variable.member' },
     ['@lsp.type.parameter'] = { fg = colors.lsp_parameter },
     ['@lsp.type.field'] = { link = '@variable.member' },
     ['@lsp.type.variable'] = { link = '@variable' },
@@ -141,8 +141,8 @@ local function set_groups()
     ['@lsp.type.enumMember'] = { link = '@constant' },
     ['@lsp.type.function'] = { link = '@function' },
     ['@lsp.type.method'] = { link = '@function.method' },
-    ['@lsp.type.macro'] = { link = '@macro' },
-    ['@lsp.type.decorator'] = { link = '@function' },
+    ['@lsp.type.macro'] = { link = '@function.macro' },
+    ['@lsp.type.decorator'] = { link = '@attribute' },
     ['@lsp.mod.constant'] = { link = '@constant' },
 
     -- TreesitterContext.
