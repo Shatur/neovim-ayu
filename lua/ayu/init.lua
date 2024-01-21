@@ -134,7 +134,7 @@ local function set_groups()
     ['@lsp.type.class'] = { link = '@type' },
     ['@lsp.type.enum'] = { link = '@type' },
     ['@lsp.type.interface'] = { link = '@type' },
-    ['@lsp.type.struct'] = { link = 'Structure' },
+    ['@lsp.type.struct'] = { link = '@variable.member' },
     ['@lsp.type.parameter'] = { fg = colors.lsp_parameter },
     ['@lsp.type.field'] = { link = '@variable.member' },
     ['@lsp.type.variable'] = { link = '@variable' },
@@ -143,7 +143,7 @@ local function set_groups()
     ['@lsp.type.function'] = { link = '@function' },
     ['@lsp.type.method'] = { link = '@function.method' },
     ['@lsp.type.macro'] = { link = '@function.macro' },
-    ['@lsp.type.decorator'] = { link = '@attribute' },
+    ['@lsp.type.decorator'] = { link = '@function' },
     ['@lsp.mod.constant'] = { link = '@constant' },
 
     -- TreesitterContext.
