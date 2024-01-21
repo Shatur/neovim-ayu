@@ -120,6 +120,7 @@ local function set_groups()
     ['@tag'] = { fg = colors.keyword },
     ['@tag.attribute'] = { fg = colors.entity },
     ['@tag.delimiter'] = { link = 'Delimiter' },
+    ['@type.qualifier'] = { fg = colors.keyword },
     ['@variable'] = { fg = colors.fg },
     ['@variable.builtin'] = { fg = colors.func },
     ['@variable.member'] = { fg = colors.tag },
