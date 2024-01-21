@@ -116,7 +116,6 @@ local function set_groups()
 
     -- TreeSitter.
     ['@property'] = { fg = colors.tag },
-    ['@attribute'] = { fg = colors.special },
     ['@tag'] = { fg = colors.keyword },
     ['@tag.attribute'] = { fg = colors.entity },
     ['@tag.delimiter'] = { link = 'Delimiter' },
