@@ -1,6 +1,7 @@
 local config = {
   defaults = {
     mirage = false,
+    terminal = true,
     overrides = {},
   },
 }

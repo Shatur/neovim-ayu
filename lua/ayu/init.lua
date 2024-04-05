@@ -309,7 +309,9 @@ function ayu.colorscheme()
   vim.g.colors_name = 'ayu'
 
   colors.generate(config.mirage)
-  set_terminal_colors()
+  if config.terminal then
+    set_terminal_colors()
+  end
   set_groups()
 end
 
