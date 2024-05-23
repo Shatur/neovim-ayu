@@ -93,6 +93,9 @@ local function set_groups()
     Conceal = { fg = colors.comment },
     CursorLineConceal = { fg = colors.guide_normal, bg = colors.line },
 
+    Added = { fg = colors.vcs_added },
+    Removed = { fg = colors.vcs_removed },
+    Changed = { fg = colors.vcs_modified },
     DiffAdd = { bg = colors.vcs_added_bg },
     DiffAdded = { fg = colors.vcs_added },
     DiffDelete = { bg = colors.vcs_removed_bg },
@@ -147,11 +150,6 @@ local function set_groups()
 
     -- TreesitterContext.
     TreesitterContext = { bg = colors.selection_inactive },
-
-    -- Gitsigns.
-    GitSignsAddLn = { fg = colors.vcs_added },
-    GitSignsDeleteLn = { fg = colors.vcs_removed },
-    GitSignsChange = { fg = colors.vcs_modified },
 
     -- Telescope.
     TelescopePromptBorder = { fg = colors.accent },
