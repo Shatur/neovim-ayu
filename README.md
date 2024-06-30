@@ -1,6 +1,6 @@
 # Neovim Ayu
 
-A colorscheme for Neovim 0.8+ reimplemented in lua from [ayu-vim](https://github.com/Luxed/ayu-vim).
+A colorscheme for Neovim reimplemented in lua from [ayu-vim](https://github.com/Luxed/ayu-vim).
 
 ## Screenshots
 
