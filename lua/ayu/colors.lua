@@ -4,7 +4,7 @@ local colors = {
 }
 
 --- Generate colors based `vim.o.background` and a variant.
----@param mirage boolean: Wheter to use `mirage` variant when `vim.o.background` is dark.
+---@param mirage boolean: Whether to use `mirage` variant when `vim.o.background` is dark.
 function colors.generate(mirage)
   if vim.o.background == 'dark' then
     if mirage then
