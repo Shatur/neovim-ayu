@@ -23,6 +23,14 @@ local ayu = {
     a = { fg = colors.bg, bg = colors.string, gui = 'bold' },
     b = { fg = colors.string, bg = colors.panel_border },
   },
+  command = {
+    a = { fg = colors.bg, bg = colors.constant, gui = 'bold' },
+    b = { fg = colors.constant, bg = colors.panel_border },
+  },
+  terminal = {
+    a = { fg = colors.bg, bg = colors.string, gui = 'bold' },
+    b = { fg = colors.string, bg = colors.panel_border },
+  },
 }
 
 return ayu
