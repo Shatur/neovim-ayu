@@ -239,6 +239,9 @@ local function set_groups()
     LeapLabelSecondary = { fg = colors.bg, bg = colors.entity },
     LeapLabelSelected = { fg = colors.bg, bg = colors.tag },
 
+    -- LSP Inlay Hints.
+    LspInlayHint = { fg = colors.lsp_inlay_hint },
+
     -- LSP Signature.
     LspSignatureActiveParameter = { italic = true },
 
