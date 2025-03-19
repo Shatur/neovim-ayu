@@ -156,6 +156,7 @@ local function set_groups()
     TelescopePromptBorder = { fg = colors.accent },
 
     -- Cmp.
+    CmpGhostText = { fg = colors.comment },
     CmpItemAbbrMatch = { fg = colors.keyword },
     CmpItemAbbrMatchFuzzy = { fg = colors.func },
     CmpItemKindText = { fg = colors.string },
