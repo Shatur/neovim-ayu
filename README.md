@@ -96,12 +96,9 @@ require('ayu').setup({
 #### Disable _italic_ for comments
 
 ```lua
-local colors = require('ayu.colors')
-colors.generate() -- Pass `true` to enable mirage
-
 require('ayu').setup({
-  overrides = function()
-    return { Comment = { fg = colors.comment } }
-  end
+  overrides = {
+    Comment = { italic = false },
+  },
 })
 ```
