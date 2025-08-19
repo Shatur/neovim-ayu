@@ -366,7 +366,7 @@ local function set_groups()
    -- HTML
   	htmlTag = {fg = colors.entity},
 	htmlEndTag = {link = 'htmlTag'},
-        htmlTagName = {fg = colors.entity},
+    htmlTagName = {fg = colors.entity},
 	htmlArg = {fg = colors.func},
 	htmlTitle = {bold = true, fg = colors.fg},
 	htmlH1 = {link = 'htmlTitle'},
