@@ -364,7 +364,7 @@ local function set_groups()
     RenderMarkdownTableFill = { fg = colors.comment },
 
    -- HTML
-  	htmlTag = {fg = colors.htmlTag},
+  	htmlTag = {fg = colors.entity},
 	htmlEndTag = {link = 'htmlTag'},
         htmlTagName = {fg = colors.entity},
 	htmlArg = {fg = colors.func},

@@ -51,7 +51,6 @@ function colors.generate(mirage)
 
       colors.fg_idle = '#707A8C'
       colors.warning = '#FFA759'
-      colors.htmlTag = '#3D7A8B'
     else
       colors.accent = '#E6B450'
       colors.bg = '#0B0E14'
@@ -93,7 +92,6 @@ function colors.generate(mirage)
 
       colors.fg_idle = '#565B66'
       colors.warning = '#FF8F40'
-      colors.htmlTag = '#22647D'
     end
   else
     colors.accent = '#FFAA33'
@@ -136,7 +134,6 @@ function colors.generate(mirage)
 
     colors.fg_idle = '#8A9199'
     colors.warning = '#FA8D3E'
-    colors.htmlTag = '#A7D6E7'
   end
 end
 
