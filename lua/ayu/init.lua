@@ -362,6 +362,19 @@ local function set_groups()
     RenderMarkdownTableHead = { fg = colors.comment },
     RenderMarkdownTableRow = { fg = colors.comment },
     RenderMarkdownTableFill = { fg = colors.comment },
+
+    -- HTML
+    htmlTag = { fg = colors.entity },
+    htmlEndTag = { link = 'htmlTag' },
+    htmlTagName = { fg = colors.entity },
+    htmlArg = { fg = colors.func },
+    htmlTitle = { bold = true, fg = colors.fg },
+    htmlH1 = { link = 'htmlTitle' },
+    htmlH2 = { link = 'htmlTitle' },
+    htmlH3 = { link = 'htmlTitle' },
+    htmlH4 = { link = 'htmlTitle' },
+    htmlH5 = { link = 'htmlTitle' },
+    htmlH6 = { link = 'htmlTitle' },
   }
 
   groups = vim.tbl_deep_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
