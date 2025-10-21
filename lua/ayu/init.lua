@@ -305,6 +305,7 @@ local function set_groups()
     MiniJump2dSpot = { fg = colors.keyword, bold = true, underline = true, nocombine = true },
     MiniJump2dSpotAhead = { fg = colors.entity, underline = true, nocombine = true },
     MiniJump2dSpotUnique = { fg = colors.tag, bold = true, underline = true, nocombine = true },
+    MiniMapNormal = { fg = colors.lsp_inlay_hint, bg = colors.panel_bg },
     MiniStarterItemPrefix = { fg = colors.accent },
     MiniStarterFooter = { link = 'Comment' },
     MiniStatuslineDevinfo = { fg = colors.fg, bg = colors.panel_border },
