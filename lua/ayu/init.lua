@@ -420,6 +420,12 @@ local function set_groups()
 
     -- Gitsigns.
     GitSignsCurrentLineBlame = { fg = colors.gutter_normal, italic = true },
+
+    -- Snacks
+    SnacksPickerDir = { link = 'Comment' },
+    SnacksPickerPathHidden = { link = 'Comment' },
+    SnacksPickerPathIgnored = { link = 'Comment' },
+    SnacksPickerGitStatusUntracked = { link = 'Special' },
   }
 
   groups = vim.tbl_deep_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
