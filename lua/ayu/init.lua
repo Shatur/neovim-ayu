@@ -281,6 +281,13 @@ local function set_groups()
     LeapLabelSecondary = { fg = colors.bg, bg = colors.entity },
     LeapLabelSelected = { fg = colors.bg, bg = colors.tag },
 
+    -- Flash.
+    FlashBackdrop = { fg = colors.comment },
+    FlashMatch = { fg = colors.bg, bg = colors.warning },
+    FlashCurrent = { fg = colors.bg, bg = colors.tag },
+    FlashLabel = { fg = colors.white, bg = colors.error, bold = true },
+    FlashCursor = { reverse = true },
+
     -- LSP Inlay Hints.
     LspInlayHint = { fg = colors.lsp_inlay_hint },
 
